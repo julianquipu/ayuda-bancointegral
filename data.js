@@ -53,7 +53,7 @@ const CONFIG = {
 
   // Pie de página
   pie: "Banco Integral × Quipu Score",
-  version: "v0.1 · piloto"
+  version: "v0.1.1 · piloto"
 };
 
 /* ---------- 2. INTRO (portada) ---------- */
@@ -261,10 +261,10 @@ const FAQ = [
     cat: "registro",
     pregunta: "¿Qué pasa si el cliente no tiene correo electrónico?",
     palabras: "correo email electronico no tiene no recuerda confirmar confirma no coincide opcional gmail saltar",
-    respuesta: "Si lo tiene, lo escribe **dos veces, igual** (si no coinciden, no deja continuar). Que sea un correo **al que tenga acceso**: le puede servir para consultas futuras o para recuperar su cuenta.",
+    respuesta: "**No pasa nada: el correo es opcional.** Si el cliente no tiene correo, puede seguir sin él. Si lo tiene, lo escribe **dos veces, igual** (si no coinciden, no deja continuar), y que sea uno **al que tenga acceso**: le puede servir para consultas futuras o para recuperar su cuenta.",
     img: [ CAP("bi_correo", "Pantalla Ingresa tu correo electrónico con el correo escrito y confirmado",
                "El mismo correo en los dos campos") ],
-    pendiente: "En la reunión del 26 ago se acordó que el correo sea **opcional** en el piloto. Confirmar cómo se ve en la app (¿hay forma de saltarlo?) y qué hacer si el cliente no tiene correo."
+    pendiente: "Confirmado: el correo es opcional. Falta la captura de cómo se salta en la app."
   },
   {
     id: "dui-no-avanza",
@@ -483,7 +483,7 @@ const SECCIONES = [
             "**SMS:** mensajes del banco, de pagos y promociones. Nunca las conversaciones personales.",
             "**Actividad del negocio:** una foto y un video de un minuto.",
             "**Redes sociales:** el Instagram del negocio, si lo tiene (opcional).",
-            "**Registro:** nombre, DUI, celular y correo."
+            "**Registro:** nombre, DUI, celular y correo (opcional)."
           ] },
           { tipo: "texto", texto: "El buró mira el pasado; Quipu Score mira el **presente** del negocio. Así se hacen visibles los micronegocios que no tienen historial." }
         ] },
@@ -578,7 +578,7 @@ const SECCIONES = [
         { tipo: "momento", quien: "tu",      texto: "**Le muestras tu QR** para que instale Quipu Score." },
         { tipo: "momento", quien: "ambos",   texto: "**Revisan juntos la primera pantalla:** deben verse los logos de Banco Integral y Quipu Score." },
         { tipo: "momento", quien: "cliente", texto: "**Permite el acceso a sus SMS** (obligatorio) y acepta las políticas de privacidad." },
-        { tipo: "momento", quien: "cliente", texto: "**Se registra:** nombre, DUI, celular con código de verificación y correo." },
+        { tipo: "momento", quien: "cliente", texto: "**Se registra:** nombre, DUI, celular con código de verificación y correo (opcional)." },
         { tipo: "momento", quien: "ambos",   texto: "**Foto y video del negocio**, tomados en el momento. Tú lo acompañas." },
         { tipo: "momento", quien: "cliente", texto: "**Instagram del negocio**, si lo tiene (opcional)." },
         { tipo: "momento", quien: "cliente", texto: "**Calculando tu score:** en segundos se envía a Banco Integral." },
@@ -662,10 +662,10 @@ const SECCIONES = [
           ] },
           { tipo: "ver", id: "codigo-no-llega", texto: "No le llega el código" }
         ] },
-      { id: "paso-7-correo", meta: "Paso 7", titulo: "Correo electrónico",
+      { id: "paso-7-correo", meta: "Paso 7", titulo: "Correo electrónico (opcional)",
         palabras: "correo email electronico confirmar opcional",
         bloques: [
-          { tipo: "texto", texto: "El cliente escribe su correo **dos veces**, igual. Que sea uno al que tenga acceso." },
+          { tipo: "texto", texto: "El correo es **opcional**: si el cliente no tiene, sigue sin él. Si lo tiene, lo escribe **dos veces**, igual, y que sea uno al que tenga acceso." },
           { tipo: "img", img: [ CAP("bi_correo", "Pantalla Ingresa tu correo electrónico con el correo escrito y confirmado", "El mismo correo en los dos campos") ] },
           { tipo: "ver", id: "correo", texto: "El cliente no tiene correo" }
         ] },

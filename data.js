@@ -261,7 +261,8 @@ const FAQ = [
     cat: "registro",
     pregunta: "¿Qué pasa si el cliente no tiene correo electrónico?",
     palabras: "correo email electronico no tiene no recuerda confirmar confirma no coincide opcional gmail saltar",
-    respuesta: "**No pasa nada: el correo es opcional.** Si el cliente no tiene correo, puede seguir sin él. Si lo tiene, lo escribe **dos veces, igual** (si no coinciden, no deja continuar), y que sea uno **al que tenga acceso**: le puede servir para consultas futuras o para recuperar su cuenta.",
+    respuesta: "**No hay problema: el correo es opcional** y no bloquea Quipu Score. Si el cliente no tiene correo, sigue con el proceso sin él. Ojalá lo tenga, porque es un **dato adicional**, pero no es obligatorio. Si lo tiene, que lo escriba **dos veces, igual** (si no coinciden, no deja continuar) y que sea uno **al que tenga acceso**.",
+    decir: "Si no tienes correo, no hay problema: seguimos sin él. Si tienes uno, escríbelo: nos sirve como dato adicional.",
     img: [ CAP("bi_correo", "Pantalla Ingresa tu correo electrónico con el correo escrito y confirmado",
                "Opcional. Si tiene correo: el mismo en los dos campos") ],
     pendiente: "Confirmado: el correo es opcional. Falta la captura de cómo se salta en la app."
@@ -662,10 +663,11 @@ const SECCIONES = [
           ] },
           { tipo: "ver", id: "codigo-no-llega", texto: "No le llega el código" }
         ] },
-      { id: "paso-7-correo", meta: "Paso 7 · Opcional", titulo: "Correo electrónico (opcional)",
+      { id: "paso-7-correo", meta: "Paso 7", titulo: "Correo electrónico: opcional",
         palabras: "correo email electronico confirmar opcional no tiene saltar",
         bloques: [
-          { tipo: "texto", texto: "El correo es **opcional**: si el cliente no tiene, sigue sin él. Si lo tiene, lo escribe **dos veces**, igual, y que sea uno al que tenga acceso." },
+          { tipo: "texto", texto: "El cliente escribe su correo **dos veces**, igual, y que sea uno al que tenga acceso." },
+          { tipo: "nota", titulo: "No bloquea Quipu Score", texto: "Si el cliente **no tiene correo, sigue sin él**: el proceso continúa igual. Ojalá lo tenga, porque es un dato adicional, pero no es obligatorio." },
           { tipo: "img", img: [ CAP("bi_correo", "Pantalla Ingresa tu correo electrónico con el correo escrito y confirmado", "Opcional. Si tiene correo: el mismo en los dos campos") ] },
           { tipo: "ver", id: "correo", texto: "El cliente no tiene correo: puede seguir sin él" }
         ] },
@@ -693,7 +695,7 @@ const SECCIONES = [
           { tipo: "ver", id: "video-como", texto: "Cómo grabar bien el video" },
           { tipo: "ver", id: "video-tarda", texto: "El video se demora mucho cargando" }
         ] },
-      { id: "paso-9-redes", meta: "Paso 9 · Opcional", titulo: "Redes sociales (opcional)",
+      { id: "paso-9-redes", meta: "Paso 9", titulo: "Redes sociales: opcional",
         palabras: "instagram redes sociales conectar opcional no tengo enlace perfil",
         bloques: [
           { tipo: "texto", texto: "Si el cliente tiene **Instagram del negocio**, toca **Conectar mi Instagram** o pega el enlace de su perfil. Si no, toca **No tengo redes sociales**: no afecta el proceso." },

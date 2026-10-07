@@ -53,7 +53,7 @@ const CONFIG = {
 
   // Pie de página
   pie: "Banco Integral × Quipu Score",
-  version: "v0.1.1 · piloto"
+  version: "v0.1.2 · piloto"
 };
 
 /* ---------- 2. INTRO (portada) ---------- */
@@ -458,6 +458,7 @@ const FAQ = [
    En el resumen: { tipo:"momento", texto:"...", quien:"tu" | "cliente" | "ambos" } */
 const SECCIONES = [
   { id: "soluciones", nav: "Soluciones", icono: "errores", tipo: "faq",
+    antetitulo: "Centro de ayuda para asesores",
     titulo: INTRO.titulo, subtitulo: INTRO.subtitulo },
 
   { id: "quipu-score", nav: "Quipu Score", icono: "score", tipo: "temas",

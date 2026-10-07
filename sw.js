@@ -6,7 +6,7 @@
    Solo si REEMPLAZAS una imagen conservando el mismo nombre de archivo,
    sube el número de VERSION (ej. v1 → v2) para que los celulares la renueven.
    ===================================================================== */
-const VERSION = "ayuda-bi-v1";
+const VERSION = "ayuda-bi-v2";
 const FONTS = "ayuda-bi-fuentes";
 const ESPERA_RED = 3000; // ms: con señal débil, pasado este tiempo se usa la copia guardada
 
@@ -14,7 +14,7 @@ importScripts("data.js"); // lee FAQ y SECCIONES para saber qué imágenes guard
 
 const SHELL = [
   "./", "index.html", "data.js", "app.js", "manifest.json",
-  "assets/bi-logo.png", "assets/favicon-64.png", "assets/icon-192.png", "assets/icon-512.png",
+  "assets/bi-logo.png", "assets/quipu-score-logo.png", "assets/favicon-64.png", "assets/icon-192.png", "assets/icon-512.png",
   "assets/icon-maskable-512.png", "assets/apple-touch-icon.png"
 ];
 

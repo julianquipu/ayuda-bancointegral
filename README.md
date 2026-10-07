@@ -73,7 +73,7 @@ Con `CONFIG.grupoWhatsApp` lleno, "Pedir ayuda" **copia el mensaje** (con la res
 
 ## Pendientes (ocultos en la versión publicada)
 
-Las dudas abiertas están en `data.js` como `pendiente: "…"`. Se ven con `mostrarPendientes: true` (y las capturas faltantes con `mostrarImagenesPendientes: true`). Las principales: intentos del código antes del bloqueo, pantalla "No pudimos calcular tu score", si el cliente puede borrar la app, correo opcional, video desde galería y tiempo de subida, formato del DUI, QR que no se lee, "No quiero continuar" en SMS.
+Las dudas abiertas están en `data.js` como `pendiente: "…"`. Se ven con `mostrarPendientes: true` (y las capturas faltantes con `mostrarImagenesPendientes: true`). Las principales: intentos del código antes del bloqueo, pantalla "No pudimos calcular tu score", video desde galería y tiempo de subida, formato del DUI, QR que no se lee, "No quiero continuar" en SMS.
 
 - Logo e íconos recortados del JPG del manual: reemplazar por el SVG oficial de Banco Integral.
 - Capturas adaptadas a El Salvador (+503, 8 dígitos, DUI): validar contra el video de producción.

@@ -53,7 +53,7 @@ const CONFIG = {
 
   // Pie de página
   pie: "Banco Integral × Quipu Score",
-  version: "v0.1.2 · piloto"
+  version: "v0.1.3 · piloto"
 };
 
 /* ---------- 2. INTRO (portada) ---------- */
@@ -428,8 +428,9 @@ const FAQ = [
     cat: "cliente",
     pregunta: "“¿Puedo borrar la app después de la visita?”",
     palabras: "borrar desinstalar eliminar app despues visita quitar puedo cliente pregunta sigue leyendo",
-    respuesta: "Respuesta **por confirmar** con el equipo de Quipu. Mientras tanto, no le digas que sí ni que no: toma nota y repórtalo con **Pedir ayuda**.",
-    pendiente: "Definir: ¿el cliente puede desinstalar la app después de “¡Todo listo!”? ¿Afecta su evaluación? ¿La app sigue leyendo SMS después del proceso?"
+    respuesta: "**Sí, puede borrarla.** Lo importante es que lo haga **después de ver “¡Todo listo!”**: en ese momento su información ya se envió a Banco Integral.",
+    decir: "Sí, puedes borrarla cuando terminemos. Tu información ya quedó enviada a Banco Integral.",
+    ver: [ { id: "como-se-termino", texto: "¿Cómo sé si el cliente terminó?" } ]
   }
 ];
 

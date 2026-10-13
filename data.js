@@ -53,7 +53,7 @@ const CONFIG = {
 
   // Pie de página
   pie: "Banco Integral × Quipu Score",
-  version: "v0.1.3 · piloto"
+  version: "v0.1.4 · piloto"
 };
 
 /* ---------- 2. INTRO (portada) ---------- */
@@ -292,16 +292,6 @@ const FAQ = [
     img: [ CAP("bi_politicas", "Pantalla Políticas de privacidad con tres documentos para leer y las casillas de aceptación abajo",
                "Marca todas las casillas y toca “Continuar”") ]
   },
-  {
-    id: "sin-instagram",
-    cat: "registro",
-    pregunta: "El cliente no tiene Instagram o no quiere conectarlo",
-    palabras: "instagram redes sociales no tiene no quiere conectar opcional omitir saltar perfil enlace contrasena",
-    respuesta: "Es **opcional** y no detiene el proceso: toca **No tengo redes sociales** y sigue. Si tiene Instagram del negocio, puede tocar **Conectar mi Instagram** o pegar el enlace de su perfil.",
-    decir: "No hay problema, es opcional. Podemos continuar sin eso.",
-    img: [ CAP("bi_redes", "Pantalla Redes sociales con el botón Conectar mi Instagram, el campo para pegar el enlace del perfil y la opción No tengo redes sociales",
-               "“No tengo redes sociales”, debajo del campo") ]
-  },
 
   /* ================= Permisos ================= */
   {
@@ -480,12 +470,11 @@ const SECCIONES = [
           { tipo: "decir", texto: "Es la app con la que Banco Integral evalúa tu crédito aunque no tengas historial. Usa información de tu celular y de tu negocio para conocerte mejor." }
         ] },
       { id: "qs-informacion", titulo: "¿Qué información recoge?",
-        palabras: "informacion datos fuentes sms mensajes foto video negocio instagram redes sociales registro alternativa",
+        palabras: "informacion datos fuentes sms mensajes foto video negocio registro alternativa",
         bloques: [
           { tipo: "lista", items: [
             "**SMS:** mensajes del banco, de pagos y promociones. Nunca las conversaciones personales.",
             "**Actividad del negocio:** una foto y un video de un minuto.",
-            "**Redes sociales:** el Instagram del negocio, si lo tiene (opcional).",
             "**Registro:** nombre, DUI, celular y correo (opcional)."
           ] },
           { tipo: "texto", texto: "El buró mira el pasado; Quipu Score mira el **presente** del negocio. Así se hacen visibles los micronegocios que no tienen historial." }
@@ -583,7 +572,6 @@ const SECCIONES = [
         { tipo: "momento", quien: "cliente", texto: "**Permite el acceso a sus SMS** (obligatorio) y acepta las políticas de privacidad." },
         { tipo: "momento", quien: "cliente", texto: "**Se registra:** nombre, DUI, celular con código de verificación y correo (opcional)." },
         { tipo: "momento", quien: "ambos",   texto: "**Foto y video del negocio**, tomados en el momento. Tú lo acompañas." },
-        { tipo: "momento", quien: "cliente", texto: "**Instagram del negocio**, si lo tiene (opcional)." },
         { tipo: "momento", quien: "cliente", texto: "**Calculando tu score:** en segundos se envía a Banco Integral." },
         { tipo: "nota", titulo: "Tres reglas", texto: "**Tú compartes el QR**: el cliente nunca busca la app solo. **Explicas cada permiso** antes de que aparezca. **Acompañas la foto y el video.** El cliente hace todo en su propio celular." }
       ] },
@@ -697,13 +685,7 @@ const SECCIONES = [
           { tipo: "ver", id: "video-como", texto: "Cómo grabar bien el video" },
           { tipo: "ver", id: "video-tarda", texto: "El video se demora mucho cargando" }
         ] },
-      { id: "paso-9-redes", meta: "Paso 9", titulo: "Redes sociales: opcional",
-        palabras: "instagram redes sociales conectar opcional no tengo enlace perfil",
-        bloques: [
-          { tipo: "texto", texto: "Si el cliente tiene **Instagram del negocio**, toca **Conectar mi Instagram** o pega el enlace de su perfil. Si no, toca **No tengo redes sociales**: no afecta el proceso." },
-          { tipo: "img", img: [ CAP("bi_redes", "Pantalla Redes sociales con Conectar mi Instagram y No tengo redes sociales", "Opcional: “No tengo redes sociales” también sirve") ] }
-        ] },
-      { id: "paso-10-final", meta: "Paso 10", titulo: "Calculando y ¡Todo listo!",
+      { id: "paso-9-final", meta: "Paso 9", titulo: "Calculando y ¡Todo listo!",
         palabras: "calculando score todo listo final enviado banco integral resultado redirigido",
         bloques: [
           { tipo: "texto", texto: "La app calcula el score en **unos segundos** y muestra **“¡Todo listo!”**: el score ya se envió a **Banco Integral**." },

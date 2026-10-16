@@ -53,7 +53,7 @@ const CONFIG = {
 
   // Pie de página
   pie: "Banco Integral × Quipu Score",
-  version: "v0.1.4 · piloto"
+  version: "v0.1.5 · piloto"
 };
 
 /* ---------- 2. INTRO (portada) ---------- */
@@ -319,9 +319,9 @@ const FAQ = [
   {
     id: "camara-no-abre",
     cat: "permisos",
-    pregunta: "La cámara no abre para la foto o el video",
+    pregunta: "La cámara no abre para la foto",
     palabras: "camara no abre permiso foto video tomar grabar permitir negado bloqueado",
-    respuesta: "La primera vez, Android pide **permiso para usar la cámara**: el cliente debe tocar **Permitir**. Después de tomar la foto, la app la guarda; espera a que termine de cargar.",
+    respuesta: "La primera vez, Android pide **permiso para usar la cámara**: el cliente debe tocar **Permitir**. Después de tomar la foto, la app la guarda; espera a que termine de cargar. Si la cámara no abre, también puede **subir la foto desde la galería**.",
     pendiente: "Falta definir qué hacer si el cliente negó el permiso de cámara (pregunta abierta también en la presentación a asesores)."
   },
 
@@ -332,7 +332,7 @@ const FAQ = [
     rapido: "Cómo grabar el video",
     pregunta: "¿Cómo grabar bien el video del negocio?",
     palabras: "video negocio grabar grabo como bien vertical minuto duracion historia productos camara galeria subir que decir consejos tips luz",
-    respuesta: "Es la parte que más le cuesta al cliente: **acompáñalo**. El video se graba con **Grabar video con la cámara**, en el momento.",
+    respuesta: "Es la parte que más le cuesta al cliente: **acompáñalo**. Por ahora la app **solo permite subir el video desde la galería**: primero lo graban con la **cámara del celular** y después lo suben con **Subir video desde la galería**.",
     pasos: [
       { titulo: "Vertical y de un minuto", texto: "El celular **de pie**, no acostado. Dura **un minuto**." },
       { titulo: "El cliente sale en cámara", texto: "Contando **la historia de su negocio y de sus productos**." },
@@ -340,10 +340,10 @@ const FAQ = [
       { final: true, titulo: "Con buena luz y sin movimientos bruscos", texto: "Así el video no sale oscuro ni borroso." }
     ],
     decir: "Cuéntanos en un minuto qué vendes y cómo trabajas. Muéstranos tu negocio como se lo mostrarías a un cliente.",
-    img: [ CAP("bi_video", "Pantalla Video del negocio con las indicaciones y los botones Grabar video con la cámara y Subir video desde la galería",
-               "Toca “Grabar video con la cámara”") ],
+    img: [ CAP("bi_video_galeria", "Pantalla Video del negocio con las indicaciones y el botón Subir video desde la galería",
+               "Graba el video con la cámara del celular y súbelo con “Subir video desde la galería”") ],
     ver: [ { id: "video-tarda", texto: "El video se demora mucho cargando" } ],
-    pendiente: "Confirmar si el video se puede subir desde la galería. Se acordó captura en el momento (antifraude), pero el Figma y la prueba del 22 ago muestran la opción de galería. La indicación de buena luz viene de la pantalla de la foto."
+    pendiente: "Por ahora el video solo se sube desde la galería (confirmado). Avisar si más adelante se habilita la grabación dentro de la app. La indicación de buena luz viene de la pantalla de la foto."
   },
   {
     id: "video-tarda",
@@ -359,9 +359,9 @@ const FAQ = [
     cat: "media",
     pregunta: "¿Cómo tomar bien la foto del negocio?",
     palabras: "foto negocio tomar como bien producto servicio espacio herramientas luz iluminacion borrosa camara",
-    respuesta: "Una foto de **lo que hace el cliente**: su producto, su servicio, su espacio de trabajo o sus herramientas. Con **buena iluminación** y **sin movimientos bruscos**, para que no salga borrosa. Se toma con **Tomar foto con la cámara**.",
+    respuesta: "Una foto de **lo que hace el cliente**: su producto, su servicio, su espacio de trabajo o sus herramientas. Con **buena iluminación** y **sin movimientos bruscos**, para que no salga borrosa. Se puede **tomar con la cámara** o **subir desde la galería**.",
     img: [ CAP("bi_foto", "Pantalla Foto con las indicaciones y los botones Tomar foto con la cámara y Subir foto desde la galería",
-               "Toca “Tomar foto con la cámara”") ]
+               "La foto: con la cámara o desde la galería") ]
   },
 
   /* ================= Resultado ================= */
@@ -571,7 +571,7 @@ const SECCIONES = [
         { tipo: "momento", quien: "ambos",   texto: "**Revisan juntos la primera pantalla:** deben verse los logos de Banco Integral y Quipu Score." },
         { tipo: "momento", quien: "cliente", texto: "**Permite el acceso a sus SMS** (obligatorio) y acepta las políticas de privacidad." },
         { tipo: "momento", quien: "cliente", texto: "**Se registra:** nombre, DUI, celular con código de verificación y correo (opcional)." },
-        { tipo: "momento", quien: "ambos",   texto: "**Foto y video del negocio**, tomados en el momento. Tú lo acompañas." },
+        { tipo: "momento", quien: "ambos",   texto: "**Foto y video del negocio:** el video se graba con la cámara del celular y se sube desde la galería. Tú lo acompañas." },
         { tipo: "momento", quien: "cliente", texto: "**Calculando tu score:** en segundos se envía a Banco Integral." },
         { tipo: "nota", titulo: "Tres reglas", texto: "**Tú compartes el QR**: el cliente nunca busca la app solo. **Explicas cada permiso** antes de que aparezca. **Acompañas la foto y el video.** El cliente hace todo en su propio celular." }
       ] },
@@ -670,17 +670,17 @@ const SECCIONES = [
           { tipo: "lista", items: [
             "Del producto, el servicio, el espacio de trabajo o las herramientas.",
             "Con **buena iluminación** y **sin movimientos bruscos**, para que no salga borrosa.",
-            "Se toma con **Tomar foto con la cámara**. La primera vez, Android pide permiso para usar la cámara."
+            "Se puede **tomar con la cámara** o **subir desde la galería**. La primera vez que usa la cámara, Android pide permiso."
           ] },
-          { tipo: "img", img: [ CAP("bi_foto", "Pantalla Foto con las indicaciones y los botones Tomar foto con la cámara y Subir foto desde la galería", "Toca “Tomar foto con la cámara”") ] },
+          { tipo: "img", img: [ CAP("bi_foto", "Pantalla Foto con las indicaciones y los botones Tomar foto con la cámara y Subir foto desde la galería", "La foto: con la cámara o desde la galería") ] },
           { tipo: "titulo", texto: "El video" },
           { tipo: "lista", items: [
             "**Vertical** y de **un minuto**.",
             "El cliente sale en cámara contando **la historia de su negocio y de sus productos**.",
             "Que muestre **lo que vende y cómo lo hace**.",
-            "Se graba con **Grabar video con la cámara**. La subida puede tardar un poco."
+            "Por ahora **solo se sube desde la galería**: grábenlo primero con la **cámara del celular** y luego toquen **Subir video desde la galería**. La subida puede tardar un poco."
           ] },
-          { tipo: "img", img: [ CAP("bi_video", "Pantalla Video del negocio con las indicaciones y el botón Grabar video con la cámara", "Toca “Grabar video con la cámara”") ] },
+          { tipo: "img", img: [ CAP("bi_video_galeria", "Pantalla Video del negocio con las indicaciones y el botón Subir video desde la galería", "Toca “Subir video desde la galería”") ] },
           { tipo: "decir", texto: "Cuéntanos en un minuto qué vendes y cómo trabajas. Muéstranos tu negocio como se lo mostrarías a un cliente." },
           { tipo: "ver", id: "video-como", texto: "Cómo grabar bien el video" },
           { tipo: "ver", id: "video-tarda", texto: "El video se demora mucho cargando" }

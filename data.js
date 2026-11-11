@@ -53,7 +53,7 @@ const CONFIG = {
 
   // Pie de página
   pie: "Banco Integral × Quipu Score",
-  version: "v0.1.5 · piloto"
+  version: "v0.1.6 · piloto"
 };
 
 /* ---------- 2. INTRO (portada) ---------- */
@@ -295,6 +295,25 @@ const FAQ = [
 
   /* ================= Permisos ================= */
   {
+    id: "letra-grande",
+    cat: "permisos",
+    rapido: "No se ven los botones",
+    pregunta: "No se ven los botones del aviso de SMS (letra muy grande)",
+    palabras: "letra grande fuente tamaño texto agrandada accesibilidad botones cortados no aparecen no se ven permitir y continuar ventana aviso sms cortada no avanza trabado zoom pantalla",
+    respuesta: "Pasa cuando el celular del cliente tiene la **letra agrandada**: el aviso de SMS se corta y **no se ven los botones** “Permitir y continuar” y “No quiero continuar”, así que no puede avanzar. Se arregla **bajando el tamaño de la letra** mientras hacen el proceso.",
+    pasos: [
+      { titulo: "Baja el tamaño de la letra", texto: "En el celular del cliente abre **Ajustes → Pantalla → Tamaño de fuente** (en algunos celulares está en **Ajustes → Accesibilidad → Tamaño de la pantalla y el texto**) y mueve la barra hacia el tamaño más pequeño." },
+      { titulo: "Vuelve a la app", texto: "Regresa a Quipu Score: ya deben verse los botones. Si todavía se cortan, en esa misma pantalla de ajustes baja también el **tamaño de la pantalla** (o **zoom de pantalla**)." },
+      { titulo: "Al terminar, déjala como estaba", texto: "Cuando el cliente vea **“¡Todo listo!”**, vuelve a subir el tamaño de la letra: lo necesita así para leer bien su celular." }
+    ],
+    decir: "Voy a bajar un momento el tamaño de la letra de tu celular para que se vean los botones. Cuando terminemos la dejamos como estaba.",
+    nota: "Ha pasado **varias veces en campo**. Revisa el tamaño de la letra **antes de empezar**: así evitas que el cliente se quede trabado en el permiso de SMS.",
+    img: [ { pendiente: "IMG-03", describe: "Aviso de SMS cortado por la letra grande, sin los botones visibles.", fuente: "Captura de un asesor en campo (reporte de Banco Integral)" } ],
+    ver: [ { id: "sms-no-quiere", texto: "Cómo explicarle el permiso de SMS" } ],
+    cierre: "Si con la letra y la pantalla al mínimo los botones siguen sin verse, **escala el caso** con **Pedir ayuda**.",
+    pendiente: "Reportado por Banco Integral en el resumen operativo. Tech tiene la recomendación de poner desplazamiento (scroll) en el aviso: quitar esta respuesta o ajustarla cuando se corrija en la app."
+  },
+  {
     id: "sms-no-quiere",
     cat: "permisos",
     pregunta: "El cliente no quiere dar el permiso de SMS",
@@ -304,7 +323,7 @@ const FAQ = [
     nota: "No prometas que el crédito queda aprobado: la app **no aprueba**, envía la información a Banco Integral, que decide.",
     img: [ CAP("bi_sms", "Aviso de Quipu Score que pide acceso a los SMS del banco, pagos o promociones, con los botones Permitir y continuar y No quiero continuar",
                "El aviso de la app: “Permitir y continuar”") ],
-    ver: [ { id: "cliente-que-mensajes", texto: "¿Qué mensajes lee Quipu Score?" }, { id: "sms-dos-permisos", texto: "Después aparece otra ventana de permiso" } ],
+    ver: [ { id: "cliente-que-mensajes", texto: "¿Qué mensajes lee Quipu Score?" }, { id: "sms-dos-permisos", texto: "Después aparece otra ventana de permiso" }, { id: "letra-grande", texto: "No se ven los botones del aviso (letra grande)" } ],
     pendiente: "Falta confirmar qué pasa si el cliente toca **No quiero continuar**: qué pantalla sigue y si puede volver a intentarlo."
   },
   {
@@ -584,7 +603,8 @@ const SECCIONES = [
             "Celular **Android** con **Play Store** (no iPhone).",
             "**Señal**, datos móviles o Wi-Fi.",
             "**Batería** suficiente.",
-            "**Espacio** de almacenamiento disponible."
+            "**Espacio** de almacenamiento disponible.",
+            "**Letra de tamaño normal**: si la tiene agrandada, bájala; si no, el aviso de SMS corta los botones."
           ] },
           { tipo: "decir", texto: "Vamos a usar tu celular unos minutos para instalar la app con la que Banco Integral evalúa tu crédito. Yo te acompaño en cada paso." },
           { tipo: "ver", id: "celulares", texto: "¿En qué celulares funciona?" }
@@ -620,6 +640,8 @@ const SECCIONES = [
             "Aparece la ventana de **Android**: ahí también toca **Permitir**."
           ] },
           { tipo: "img", img: [ CAP("bi_sms", "Aviso de Quipu Score que pide acceso a los SMS con los botones Permitir y continuar y No quiero continuar", "El aviso de la app; después viene la ventana de Android") ] },
+          { tipo: "nota", titulo: "¿No se ven los botones?", texto: "Si el celular tiene la **letra agrandada**, el aviso se corta y no aparecen “Permitir y continuar” ni “No quiero continuar”. Baja el tamaño de la letra y vuelvan a la app." },
+          { tipo: "ver", id: "letra-grande", texto: "Cómo bajar el tamaño de la letra" },
           { tipo: "ver", id: "sms-no-quiere", texto: "El cliente no quiere dar el permiso de SMS" }
         ] },
       { id: "paso-4-politicas", meta: "Paso 4", titulo: "Políticas de privacidad",

@@ -88,6 +88,7 @@ const CAP = (nombre, alt, cap) => ({
      palabras  → palabras clave para el buscador (sin tildes, entre más mejor)
      respuesta → el texto principal
    Opcionales:
+     icono     → (opcional) ícono propio en "Lo más frecuente", si no usa el de su categoría: "letra" …
      rapido    → título corto (2–4 palabras) para mostrarla en "Lo más frecuente" (máx. 4–6 en total)
      aplica    → a qué equipos aplica (ej. "Samsung Galaxy · One UI")
      nota      → recuadro de "Importante"
@@ -297,7 +298,8 @@ const FAQ = [
   {
     id: "letra-grande",
     cat: "permisos",
-    rapido: "No se ven los botones",
+    rapido: "No se ven los botones (letra muy grande)",
+    icono: "letra",
     pregunta: "No se ven los botones del aviso de SMS (letra muy grande)",
     palabras: "letra grande fuente tamaño texto agrandada accesibilidad botones cortados no aparecen no se ven permitir y continuar ventana aviso sms cortada no avanza trabado zoom pantalla",
     respuesta: "Pasa cuando el celular del cliente tiene la **letra agrandada**: el aviso de SMS se corta y **no se ven los botones** “Permitir y continuar” y “No quiero continuar”, así que no puede avanzar. Se arregla **bajando el tamaño de la letra** mientras hacen el proceso.",

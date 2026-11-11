@@ -36,6 +36,7 @@
     // Íconos de categoría propios (trazo redondeado, mismo peso visual que Material Symbols Rounded)
     descarga: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M12 7v7.5m-3-3 3 3 3-3M10.5 18.5h3"/></svg>',
     codigo: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 5h15A1.5 1.5 0 0 1 21 6.5v9a1.5 1.5 0 0 1-1.5 1.5H10l-4.5 3.5V17h-1A1.5 1.5 0 0 1 3 15.5v-9A1.5 1.5 0 0 1 4.5 5z"/><path d="M8 11h.01M12 11h.01M16 11h.01" stroke-width="2.6"/></svg>',
+    letra: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5.5h11M8.5 5.5v13M14.5 11h7M18 11v7.5"/></svg>',
     permisos: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.8 19.5 5.6v5.6c0 4.6-3.1 8.6-7.5 10-4.4-1.4-7.5-5.4-7.5-10V5.6z"/><path d="m8.8 12 2.2 2.2 4.4-4.4"/></svg>',
     wa: '<svg aria-hidden="true"><use href="#i-wa"/></svg>' // WhatsApp no existe en Material: se usa su logo oficial
   };
@@ -331,7 +332,7 @@
     $("tiles").innerHTML = items.map((f) => {
       const c = CATEGORIAS[f.cat] || { color: "gris", icono: "check" };
       return '<button type="button" class="tile sl" data-open="' + esc(f.id) + '">' + esc(f.rapido) +
-        '<span class="ic ' + c.color + '">' + (ICON[c.icono] || ICON.check) + "</span></button>";
+        '<span class="ic ' + c.color + '">' + (ICON[f.icono] || ICON[c.icono] || ICON.check) + "</span></button>";
     }).join("");
   }
 
